@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Uploads
+{% endblock %}
+
+{% block main %}
+<body id="inside_bg">
+<div class="container">
+
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <dl>
+            <p>
+                <input type="file" name="files[]" class="form-control" autocomplete="off" required  multiple="true">
+            </p>
+        </dl>
+        <p>
+            <input type="submit" value="Submit" class="btn btn-info">
+        </p>
+    </form>
+</div>
+<div  class="container">
+    <a href="/show_uploads"><h5>&#128193; My Files</h5></a>
+</div>
+</body>
+{% endblock %}

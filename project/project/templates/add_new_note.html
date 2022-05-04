@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add New Note
+{% endblock %}
+
+{% block main %}
+<body id="inside_bg">
+    <marquee behavior="scroll" direction="left" style="color: pink" class="simple-shadow"><h5>Hello, {{ username }}! welcome to muggle notes.<b>&#x1F609</b></h5></marquee>
+    <div class="container my-3">
+        <div class="card bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Add a note</h5>
+                <div class="form-group">
+                  <input id="addtitle" autocomplete="off" autofocus class="form-control"  required placeholder="Note title" type="text">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" id="addTxt" rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary" id="addBtn">Add Note</button>
+            </div>
+        </div>
+        <hr style="background-color: pink">
+        <h1 style="color: pink" class="simple-shadow">Your Notes</h1>
+        <hr style="background-color: pink">
+        <div id="notes" class="row container-fluid text-white"> </div>
+    </div>
+
+    <script>
+        let name = '{{ username }}';
+    </script>
+    <script src="../static/app.js"></script>
+{% endblock %}
+</body>

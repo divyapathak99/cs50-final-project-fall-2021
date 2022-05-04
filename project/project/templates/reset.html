@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reset password
+{% endblock %}
+
+{% block main %}
+<body id="apology_bg">
+   <form action="/reset" method="post" >
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="email" required placeholder="Email add" type="email">
+        </div>
+        <button class="btn btn-primary" type="submit">reset password</button>
+    </form>
+  </body>
+{% endblock %}

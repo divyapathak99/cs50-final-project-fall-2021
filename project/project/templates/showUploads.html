@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Uploaded files
+{% endblock %}
+
+{% block main %}
+
+<body id="inside_bg">
+  <
+  <table class="table table-striped">
+  <thead style="color: white">
+    <th><h4><b>Filename</b></h4></th>
+    <th><h4><b>Date</b></h4></th>
+  </thead>
+  <tbody>
+    {% for upload in uploads %}
+    <tr>
+      <td><h5><a href='{{ url_for('static', filename='uploads/' + upload["filename"] ) }}' style="color: pink">{{ upload['filename'] }}</a></h5></td>
+      <td style="color: pink"><h5>{{ upload["date"] }}</h5></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+  </body>
+{% endblock %}
+
